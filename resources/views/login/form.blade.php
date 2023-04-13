@@ -4,8 +4,6 @@
 <!-- Si es la página __invoke no hace falta action(?) -->
 <form action="" method="POST" accept-charset="UTF-8">
         @csrf
-
-                  <h2 class="fw-bold mb-2 text-uppercase" style="color:#101632">Formulario login</h2>
                   <p class="text-white-50 mb-5"></p>
                   <div class="form-outline form-white mb-4">
                     <input type="text" name="user" id="typeEmailX" class="form-control form-control-lg" placeholder="Nombre de usuario" required/>
