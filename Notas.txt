@@ -1,0 +1,14 @@
+bbdd: cambiar nombre base de datos en .env
+
+Los nombres de las tablas en la bbdd tienen que estar en plural*
+crear migracion: php artisan make:migration create_users_table
+
+php artisan migrate  // php artisan migrate:refresh-> hacer migraciones
+
+php artisan make:controller UserController -> crear controlador en singular y mayusculas :)
+
+
+Middleware 
+Crear UserMiddleware.php
+
+Kernel -> Añadir ruta
