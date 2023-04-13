@@ -37,7 +37,18 @@ class UserController extends Controller
         return view('Principal');
     }
 
+    public function listar(){
+        $user=User::all();
 
+        return view('funciones.listar' ,[
+            'listado' => $user
+        ]);
+    }
+
+
+
+
+    //logout
     public function logout(Request $request){
         $request->session()->flush();
         return redirect('/');

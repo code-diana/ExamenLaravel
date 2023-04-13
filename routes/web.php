@@ -24,3 +24,6 @@ Route::get('logout', [UserController::class , 'logout']);
 //Pagina general
 Route::get('startPage', [UserController::class , 'start'])->name('principal')->middleware('user');
 
+//listar
+Route::get('listar', [UserController::class , 'listar'])->middleware('user');
+

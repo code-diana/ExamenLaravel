@@ -3,5 +3,6 @@
 <h1>Página principal</h1>
 <p>Hola <?php if(session('user')){echo session('user');}?> </p>
 
+<a href="listar">Listar</a><br>
 <a href="logout">Cerrar sesión</a>
 @endsection
