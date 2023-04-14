@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\PetController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,15 +15,22 @@ use App\Http\Controllers\UserController;
 */
 
 //Pagina principal seguramente un login
-Route::get('/', UserController::class)->name('login');
-Route::post('/', [UserController::class , 'login'])->name('login');
+Route::get('/', PetController::class)->name('login');
+Route::post('/', [PetController::class , 'login'])->name('login');
+
+//Registrar mascota
+Route::get('register', [PetController::class , 'register']);
+Route::post('register', [PetController::class , 'register']);
 
 //Cerrar Sesión
-Route::get('logout', [UserController::class , 'logout']);
+Route::get('logout', [PetController::class , 'logout']);
 
 //Pagina general
-Route::get('startPage', [UserController::class , 'start'])->name('principal')->middleware('user');
+Route::get('startPage', [PetController::class , 'start'])->name('principal')->middleware('user');
 
-//listar
-Route::get('listar', [UserController::class , 'listar'])->middleware('user');
+// //listar
+// Route::get('listar', [PetController::class , 'listar'])->middleware('user');
+
+//ver fotos
+Route::get('verfoto/{id}', [PetController::class , 'verfoto'])->middleware('user');
 
